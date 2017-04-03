@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!--meta-->
+    <title>
+      
+      API Reference | 
+      Sol Documentation
+    </title>
+
+    <meta charset="UTF-8" />
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+
+    <!--favicon-->
+    <link rel="shortcut icon" href="" />
+    <link rel="icon" href="" type="image/x-icon" />
+
+    <!--style-->
+    <link rel="stylesheet" href="/inc/template/style.css" />
+
+    <!--script-->
+    <script type="text/javascript">
+    </script>
+</head>
+<body>
+
+    <div id="wrap">
+        <div id="header">
+            <h1><a href="">Sol Documentation</a></h1>
+            <ul>
+                <li class="active"><a href="/pages/api.html">API Reference</a></li>
+<li><a href="/pages/building.html">Building Sol</a></li>
+<li><a href="/pages/packaging.html">Packaging Games</a></li>
+
+            </ul>
+        </div><!--end header-->
+<div class="post">
+    <h1>API Reference</h1>
+    <div class="content">
+
+<p><nav class="sidebar">
+ <a href="#Callbacks">sol</a>
+ <a href="#solData">sol.Data</a>
+ <a href="#solSource">sol.Source</a>
+ <a href="#solBuffer">sol.Buffer</a>
+ <a href="#solGif">sol.Gif</a>
+ <a href="#solFont">sol.Font</a>
+ <a href="#solgraphics">sol.graphics</a>
+ <a href="#solmouse">sol.mouse</a>
+ <a href="#solsystem">sol.system</a>
+ <a href="#solaudio">sol.audio</a>
+ <a href="#solfs">sol.fs</a>
+ <a href="#soltime">sol.time</a>
+ <a href="#solbufferfx">sol.bufferfx</a>
+ <a href="#soldebug">sol.debug</a>
+ <a href="#solkeyboard">sol.keyboard</a>
+ <a href="#Config">config</a>
+</nav></p>
+
+<h2 id='[Config]Config'><a href="#Config">Config</a></h2>
+
+<h3 id='Callbacks'>Callbacks</h3>
+
+<h5 id='`solonLoad`'><code>sol.onLoad()</code></h5>
+<h5 id='`solonUpdatedt`'><code>sol.onUpdate(dt)</code></h5>
+<h5 id='`solonDraw`'><code>sol.onDraw()</code></h5>
+<h5 id='`solonKeyDownkeychar`'><code>sol.onKeyDown(key, char)</code></h5>
+<h5 id='`solonKeyUpkey`'><code>sol.onKeyUp(key)</code></h5>
+<h5 id='`solonMouseMovexy`'><code>sol.onMouseMove(x,y)</code></h5>
+<h5 id='`solonMouseDownxybutton`'><code>sol.onMouseDown(x, y, button)</code></h5>
+<h5 id='`solonMouseUpxybutton`'><code>sol.onMouseUp(x, y, button)</code></h5>
+<h5 id='`solonQuit`'><code>sol.onQuit()</code></h5>
+<h5 id='`solonErrormsgstacktrace`'><code>sol.onError(msg, stacktrace)</code></h5>
+<h5 id='`solgetVersion`'><code>sol.getVersion()</code></h5>
+<h5 id='`sol_pcallfn[]`'><code>sol._pcall(fn [, ...])</code></h5>
+<h5 id='`sol_argv`'><code>sol._argv</code></h5>
+
+<h3 id='solData'>sol.Data</h3>
+<h5 id='`solDatafromFilefilename`'><code>sol.Data.fromFile(filename)</code></h5>
+<h5 id='`solDatafromStringstring`'><code>sol.Data.fromString(string)</code></h5>
+<h5 id='`DatagetLength`'><code>Data:getLength()</code></h5>
+<h5 id='`DatatoString`'><code>Data:toString()</code></h5>
+
+<h3 id='solSource'>sol.Source</h3>
+<h5 id='`solSourcefromBlank`'><code>sol.Source.fromBlank()</code></h5>
+<h5 id='`solSourcefromDatadata`'><code>sol.Source.fromData(data)</code></h5>
+<h5 id='`SourcesetCallbackcallback`'><code>Source:setCallback(callback)</code></h5>
+<h5 id='`SourcesetDestination[dest]`'><code>Source:setDestination([dest])</code></h5>
+<h5 id='`SourcesetGain[gain]`'><code>Source:setGain([gain])</code></h5>
+<h5 id='`SourcesetPan[pan]`'><code>Source:setPan([pan])</code></h5>
+<h5 id='`SourcesetLoop[loop]`'><code>Source:setLoop([loop])</code></h5>
+<h5 id='`SourcesetRate[rate]`'><code>Source:setRate([rate])</code></h5>
+<h5 id='`SourcegetState`'><code>Source:getState()</code></h5>
+<h5 id='`SourcegetLength`'><code>Source:getLength()</code></h5>
+<h5 id='`Sourceplay[reset]`'><code>Source:play([reset])</code></h5>
+<h5 id='`Sourcepause`'><code>Source:pause()</code></h5>
+<h5 id='`Sourcestop`'><code>Source:stop()</code></h5>
+
+<h3 id='solBuffer'>sol.Buffer</h3>
+<h5 id='`solBufferfromFilefilename`'><code>sol.Buffer.fromFile(filename)</code></h5>
+<h5 id='`solBufferfromStringstring`'><code>sol.Buffer.fromString(string)</code></h5>
+<h5 id='`solBufferfromBlankwh`'><code>sol.Buffer.fromBlank(w, h)</code></h5>
+<h5 id='`BuffersetPixelxyrgba`'><code>Buffer:setPixel(x, y, r, g, b, a)</code></h5>
+<h5 id='`BuffersetAlphaalpha`'><code>Buffer:setAlpha(alpha)</code></h5>
+<h5 id='`BuffersetClipxywh`'><code>Buffer:setClip(x, y, w, h)</code></h5>
+<h5 id='`BuffersetBlendmode`'><code>Buffer:setBlend(mode)</code></h5>
+<h5 id='`BuffersetColorrgba`'><code>Buffer:setColor(r, g, b, a)</code></h5>
+<h5 id='`BuffergetWidth`'><code>Buffer:getWidth()</code></h5>
+<h5 id='`BuffergetHeight`'><code>Buffer:getHeight()</code></h5>
+<h5 id='`BuffergetSize`'><code>Buffer:getSize()</code></h5>
+<h5 id='`BuffergetPixelxy`'><code>Buffer:getPixel(x, y)</code></h5>
+<h5 id='`BufferfloodFillxy[rgba]`'><code>Buffer:floodFill(x, y [, r, g, b, a])</code></h5>
+<h5 id='`BufferdrawPixelxy[rgba]`'><code>Buffer:drawPixel(x, y [, r, g, b, a])</code></h5>
+<h5 id='`BufferdrawLinex1y1x2y2[rgba]`'><code>Buffer:drawLine(x1, y1, x2, y2 [, r, g, b, a])</code></h5>
+<h5 id='`BufferdrawRectxywh[rgba]`'><code>Buffer:drawRect(x, y, w, h [, r, g, b, a])</code></h5>
+<h5 id='`BufferdrawBoxxywh[rgba]`'><code>Buffer:drawBox(x, y, w, h [, r, g, b, a])</code></h5>
+<h5 id='`BufferdrawCirclexyradius[rbga]`'><code>Buffer:drawCircle(x, y, radius [, r, b, g, a])</code></h5>
+<h5 id='`BufferdrawRingxyradius[rbga]`'><code>Buffer:drawRing(x, y, radius [, r, b, g, a])</code></h5>
+<h5 id='`BufferdrawPolygonxysideradiusrotrgba`'><code>Buffer:drawPolygon(x, y, side, radius, rot, r, g, b, a)</code></h5>
+<h5 id='`BufferdrawText[font]textxy[width]`'><code>Buffer:drawText([font,] text, x, y [, width])</code></h5>
+<h5 id='`BufferdrawBuffersrcxy[subrotsxsyoxoy]`'><code>Buffer:drawBuffer(src, x, y [, sub, rot, sx, sy, ox, oy])</code></h5>
+<h5 id='`Bufferdrawsrcxy[subrotsxsyoxoy]`'><code>Buffer:draw(src, x, y [, sub, rot, sx, sy, ox, oy])</code></h5>
+<h5 id='`BuffercopyPixelssrcxy[subsxsy]`'><code>Buffer:copyPixels(src, x, y [, sub, sx, sy])</code></h5>
+<h5 id='`Buffernoise[seedlowhighgrey]`'><code>Buffer:noise([seed, low, high, grey])</code></h5>
+<h5 id='`Bufferclone`'><code>Buffer:clone()</code></h5>
+<h5 id='`Bufferreset`'><code>Buffer:reset()</code></h5>
+
+<h3 id='solGif'>sol.Gif</h3>
+<h5 id='`solGifnewwhncolors`'><code>sol.Gif.new(w, h, ncolors)</code></h5>
+<h5 id='`Gifupdatebufdelay`'><code>Gif:update(buf, delay)</code></h5>
+<h5 id='`Gifclose`'><code>Gif:close()</code></h5>
+
+<h3 id='solFont'>sol.Font</h3>
+<h5 id='`solFontfromFilefilenamesize`'><code>sol.Font.fromFile(filename, size)</code></h5>
+<h5 id='`solFontfromStringstringsize`'><code>sol.Font.fromString(string, size)</code></h5>
+<h5 id='`solFontfromEmbeddedsize`'><code>sol.Font.fromEmbedded(size)</code></h5>
+<h5 id='`Fontrenderstring`'><code>Font:render(string)</code></h5>
+<h5 id='`FontgetWidthstring`'><code>Font:getWidth(string)</code></h5>
+<h5 id='`FontgetHeight`'><code>Font:getHeight()</code></h5>
+
+<h3 id='solmouse'>sol.mouse</h3>
+<h5 id='`solmouseisDownkey`'><code>sol.mouse.isDown(key)</code></h5>
+<h5 id='`solmousewasPressedkey`'><code>sol.mouse.wasPressed(key)</code></h5>
+<h5 id='`solmousesetVisiblevisible`'><code>sol.mouse.setVisible(visible)</code></h5>
+<h5 id='`solmousegetPosition`'><code>sol.mouse.getPosition()</code></h5>
+<h5 id='`solmousesetPositionxy`'><code>sol.mouse.setPosition(x, y)</code></h5>
+<h5 id='`solmousegetX`'><code>sol.mouse.getX()</code></h5>
+<h5 id='`solmousegetY`'><code>sol.mouse.getY()</code></h5>
+
+<h3 id='solsystem'>sol.system</h3>
+<h5 id='`solsysteminfotype`'><code>sol.system.info(type)</code></h5>
+<h5 id='`solsystempoll`'><code>sol.system.poll()</code></h5>
+<h5 id='`solsystemquit`'><code>sol.system.quit()</code></h5>
+
+<h3 id='solaudio'>sol.audio</h3>
+<h5 id='`solaudiomaster`'><code>sol.audio.master</code></h5>
+
+<h3 id='solfs'>sol.fs</h3>
+<h5 id='`solfsappendfilenamedata`'><code>sol.fs.append(filename, data)</code></h5>
+<h5 id='`solfsgetSizefilename`'><code>sol.fs.getSize(filename)</code></h5>
+<h5 id='`solfsdeletefilename`'><code>sol.fs.delete(filename)</code></h5>
+<h5 id='`solfsisDirfilename`'><code>sol.fs.isDir(filename)</code></h5>
+<h5 id='`solfsunmountpath`'><code>sol.fs.unmount(path)</code></h5>
+<h5 id='`solfsgetModifiedfilename`'><code>sol.fs.getModified(filename)</code></h5>
+<h5 id='`solfsexistsfilename`'><code>sol.fs.exists(filename)</code></h5>
+<h5 id='`solfsmountpath`'><code>sol.fs.mount(path)</code></h5>
+<h5 id='`solfssetWritePathpath`'><code>sol.fs.setWritePath(path)</code></h5>
+<h5 id='`solfswritefilenamedata`'><code>sol.fs.write(filename, data)</code></h5>
+<h5 id='`solfsreadfilename`'><code>sol.fs.read(filename)</code></h5>
+<h5 id='`solfslistDirpath`'><code>sol.fs.listDir(path)</code></h5>
+<h5 id='`solfsmakeDirspath`'><code>sol.fs.makeDirs(path)</code></h5>
+
+<h3 id='soltime'>sol.time</h3>
+<h5 id='`soltimegetAverage`'><code>sol.time.getAverage()</code></h5>
+<h5 id='`soltimegetNow`'><code>sol.time.getNow()</code></h5>
+<h5 id='`soltimegetTime`'><code>sol.time.getTime()</code></h5>
+<h5 id='`soltimegetDelta`'><code>sol.time.getDelta()</code></h5>
+<h5 id='`soltimesleepseconds`'><code>sol.time.sleep(seconds)</code></h5>
+<h5 id='`soltimestep`'><code>sol.time.step()</code></h5>
+<h5 id='`soltimegetFps`'><code>sol.time.getFps()</code></h5>
+
+<h3 id='solgraphics'>sol.graphics</h3>
+<h5 id='`solgraphicssetColorrgba`'><code>sol.graphics.setColor(r,g,b,a)</code></h5>
+<h5 id='`solgraphicsdrawCirclexyradiusrbga`'><code>sol.graphics.drawCircle(x, y, radius, r, b, g, a)</code></h5>
+<h5 id='`solgraphicsgetPixelxy`'><code>sol.graphics.getPixel(x, y)</code></h5>
+<h5 id='`solgraphicsdrawBuffersrcxysubrotsxsyoxoy`'><code>sol.graphics.drawBuffer(src, x, y, sub, rot, sx, sy, ox, oy)</code></h5>
+<h5 id='`solgraphicsfloodFillxyrgba`'><code>sol.graphics.floodFill(x, y, r, g, b, a)</code></h5>
+<h5 id='`solgraphicscopyPixelssrcxysubsxsy`'><code>sol.graphics.copyPixels(src, x, y, sub, sx, sy)</code></h5>
+<h5 id='`solgraphicssetFullscreenfullscreen`'><code>sol.graphics.setFullscreen(fullscreen)</code></h5>
+<h5 id='`solgraphicsgetFullscreen`'><code>sol.graphics.getFullscreen()</code></h5>
+<h5 id='`solgraphicssetBlendmode`'><code>sol.graphics.setBlend(mode)</code></h5>
+<h5 id='`solgraphicsdrawRingxyradiusrbga`'><code>sol.graphics.drawRing(x, y, radius, r, b, g, a)</code></h5>
+<h5 id='`solgraphicsdrawPolygonxysideradiusrotrgba`'><code>sol.graphics.drawPolygon(x, y, side, radius, rot, r, g, b, a)</code></h5>
+<h5 id='`solgraphicsgetWidth`'><code>sol.graphics.getWidth()</code></h5>
+<h5 id='`solgraphicssetClearColorrgba`'><code>sol.graphics.setClearColor(r, g, b, a)</code></h5>
+<h5 id='`solgraphicsgetClearColor`'><code>sol.graphics.getClearColor()</code></h5>
+<h5 id='`solgraphicsgetHeight`'><code>sol.graphics.getHeight()</code></h5>
+<h5 id='`solgraphicsclearrgba`'><code>sol.graphics.clear(r,g,b,a)</code></h5>
+<h5 id='`solgraphicsreset`'><code>sol.graphics.reset()</code></h5>
+<h5 id='`solgraphicssetSizewidthheight`'><code>sol.graphics.setSize(width, height)</code></h5>
+<h5 id='`solgraphicsdrawBoxxywhrgba`'><code>sol.graphics.drawBox(x, y, w, h, r, g, b, a)</code></h5>
+<h5 id='`solgraphicsclone`'><code>sol.graphics.clone()</code></h5>
+<h5 id='`solgraphicssetAlphaalpha`'><code>sol.graphics.setAlpha(alpha)</code></h5>
+<h5 id='`solgraphicssetPixelxyrgba`'><code>sol.graphics.setPixel(x, y, r, g, b, a)</code></h5>
+<h5 id='`solgraphicsnoiseseedlowhighgrey`'><code>sol.graphics.noise(seed, low, high, grey)</code></h5>
+<h5 id='`solgraphicsgetSize`'><code>sol.graphics.getSize()</code></h5>
+<h5 id='`solgraphicsdrawPixelxyrgba`'><code>sol.graphics.drawPixel(x, y, r, g, b, a)</code></h5>
+<h5 id='`solgraphicsdrawPixelxyrgba`'><code>sol.graphics.drawPixel(x, y, r, g, b, a)</code></h5>
+<h5 id='`solgraphicsdrawsrcxysubrotsxsyoxoy`'><code>sol.graphics.draw(src, x, y, sub, rot, sx, sy, ox, oy)</code></h5>
+<h5 id='`solgraphicsdrawRectxywhrgba`'><code>sol.graphics.drawRect(x, y, w, h, r, g, b, a)</code></h5>
+<h5 id='`solgraphicssetClipxywh`'><code>sol.graphics.setClip(x, y, w, h)</code></h5>
+<h5 id='`solgraphicsdrawLinex1y1x2y2rgba`'><code>sol.graphics.drawLine(x1, y1, x2, y2, r, g, b, a)</code></h5>
+<h5 id='`solgraphicsdrawTextfonttextxywidth`'><code>sol.graphics.drawText(font, text, x, y, width)</code></h5>
+
+<h3 id='solbufferfx'>sol.bufferfx</h3>
+<h5 id='`solbufferfxdesaturateselfamount`'><code>sol.bufferfx.desaturate(self, amount)</code></h5>
+<h5 id='`solbufferfxdissolveselfamountsinvestigatelater`'><code>sol.bufferfx.dissolve(self,amount, s? investigate later)</code></h5>
+<h5 id='`solbufferfxblurselfsrcrxry`'><code>sol.bufferfx.blur(self, src, rx, ry, )</code></h5>
+<h5 id='`solbufferfxwaveselfsrcaxaysxsyoxoy`'><code>sol.bufferfx.wave(self, src, ax, ay, sx, sy, ox, oy)</code></h5>
+<h5 id='`solbufferfxmaskselfmaskchannel`'><code>sol.bufferfx.mask(self, mask, channel)</code></h5>
+<h5 id='`solbufferfxpaletteselfpalette`'><code>sol.bufferfx.palette(self, palette)</code></h5>
+<h5 id='`solbufferfxdisplaceselfsrcmapcxcysxsy`'><code>sol.bufferfx.displace(self, src, map, cx, cy, sx, sy)</code></h5>
+
+<h3 id='soldebug'>sol.debug</h3>
+<h5 id='`soldebugsetVisiblevisible`'><code>sol.debug.setVisible(visible)</code></h5>
+<h5 id='`soldebugsetFocusedfocused`'><code>sol.debug.setFocused(focused)</code></h5>
+<h5 id='`soldebuggetVisible`'><code>sol.debug.getVisible()</code></h5>
+<h5 id='`soldebuggetFocused`'><code>sol.debug.getFocused()</code></h5>
+<h5 id='`soldebugremoveIndicatorindicator`'><code>sol.debug.removeIndicator(indicator)</code></h5>
+<h5 id='`soldebugaddIndicatorfnminmax`'><code>sol.debug.addIndicator(fn, min, max)</code></h5>
+<h5 id='`soldebugclear`'><code>sol.debug.clear()</code></h5>
+
+<h3 id='solkeyboard'>sol.keyboard</h3>
+<h5 id='`solkeyboardisDownkey`'><code>sol.keyboard.isDown(key, ...)</code></h5>
+<h5 id='`solkeyboardwasPressedkey`'><code>sol.keyboard.wasPressed(key, ...)</code></h5>
+
+<h3 id='Config'>Config</h3>
+<h5 id='`configtitle`'><code>config.title</code></h5>
+<h5 id='`configwidth`'><code>config.width</code></h5>
+<h5 id='`configheight`'><code>config.height</code></h5>
+<h5 id='`configmaxfps`'><code>config.maxfps</code></h5>
+<h5 id='`configsamplerate`'><code>config.samplerate</code></h5>
+<h5 id='`configbuffersize`'><code>config.buffersize</code></h5>
+<h5 id='`configfullscreen`'><code>config.fullscreen</code></h5>
+<h5 id='`configresizable`'><code>config.resizable</code></h5>
+<h5 id='`configborderless`'><code>config.borderless</code></h5>
+<h5 id='`configidentity`'><code>config.identity</code></h5>
+
+</div>
+</div>
+        <div class="biglinks">
+        </div><!--end biglinks-->
+
+        <div id="footer">
+            <span class="left">Content &copy; Emeka Nkurumeh, no rights reserved</span>
+            <span class="right">Generated by <a href="https://github.com/Fizzadar/Luapress">Luapress</a></span>
+        </div><!--end footer-->
+    </div><!--end wrap-->
+</body>
+</html>
